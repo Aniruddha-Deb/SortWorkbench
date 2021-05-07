@@ -1,22 +1,22 @@
-# Algorithms
-General CS Algorithms, implemented in C
+# SortWorkbench
+A sorting benchmark, implemented in C/SDL
 
 ![Plotter example](res/ghimg/plotter_example.png)
 
 ------------------
 
-## Algorithm tree 
+## File Tree
 
 - `ui`
 	- `SDL_util.c`
-		- Bresenham line Algorithm (for dotted lines)
-		- Bresenham (midpoint) circle algorithm (for filled and non-filled circles)
+		- Bresenham line (for dotted lines)
+		- Bresenham (midpoint) circle (for filled and non-filled circles)
 	- `plotter.c`
 		- Graph scale determining algorithm
 		- Graph rendering stuffs
 	- `color.c`
-		- Procedural color generation algorithm
-		- HSV to RGB conversion algorithm
+		- Procedural color generation 
+		- HSV to RGB conversion 
 - `util`
 	- `ds.c`
 		- ArrayList implementation
@@ -30,3 +30,16 @@ General CS Algorithms, implemented in C
 		- Simple logger
 	- `gen.c`
 		- General algorithms - min, max, swap etc.
+- `sorts`
+	- `sorts.c`
+		- Sorts go here: selection, insertion, bubble, merge, etc etc
+	- `sorttest.c`
+		- The main program; compile with make PROG=sorts/sorttest.c
+
+## Instructions for building:
+- Clone the repository
+- do `mkdir obj bin`
+- do `mkdir obj/ui obj/sorts obj/util bin/sorts`
+- do `make PROG=sorts/sorttest`. You must have LibSDL2 and LibSDL\_TTF 
+
+The final executable is made in `bin/sorts/sorttest`. Run it and enjoy :)
